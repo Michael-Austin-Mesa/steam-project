@@ -83,7 +83,7 @@ def get_top10_python(train):
     the Python coding language, then plots the 10 most frequently
     used words in the column labeled 'language'
     '''
-    python_df = train[train['language']=='Python']
+    python_df = train
     python_txt = ' '.join(python_df['lemmatized'])
     python_txt = pd.Series(python_txt.split()).value_counts().head(10).sort_values(ascending=True)
     
